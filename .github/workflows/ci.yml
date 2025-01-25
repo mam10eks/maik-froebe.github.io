@@ -32,7 +32,7 @@ jobs:
       - name: Build production bundle
         uses: borales/actions-yarn@v4
         with:
-          cmd: build
+          cmd: build --base="/maik-froebe.github.io/"
       - name: 📤 Upload web app artifact
         uses: actions/upload-pages-artifact@v3
         with:
