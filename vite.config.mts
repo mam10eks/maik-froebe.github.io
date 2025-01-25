@@ -23,15 +23,7 @@ export default defineConfig({
         configFile: 'src/styles/settings.scss',
       },
     }),
-    Components(),
-    ViteFonts({
-      google: {
-        families: [ {
-          name: 'Roboto',
-          styles: 'wght@100;300;400;500;700;900',
-        }],
-      },
-    }),
+    Components()
   ],
   define: { 'process.env': {} },
   resolve: {
