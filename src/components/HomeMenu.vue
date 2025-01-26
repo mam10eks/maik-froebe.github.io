@@ -1,25 +1,23 @@
 <template>
-  <v-app-bar style="background-color: #323232; color: white;">
-    <v-container style="max-width: 1110px;">
-      <v-row>
-        <v-col>
-          <router-link to="/">
-            <img src="/favicon.png" alt="Maik Fr&ouml;be" style="height: 2.667em">
-          </router-link>
-        </v-col>
+  <v-app-bar>
+    <v-app-bar-title>
+      <router-link to="/" style="text-decoration: none; color: inherit; outline: 0;">
+        <h2>Maik Fr&ouml;be</h2>
+      </router-link>
+    </v-app-bar-title>
+    <template v-slot:prepend>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-app-bar-nav-icon v-bind="props"/>
+        </template>
 
-        <v-col class="text-right">
-          <v-menu>
-            <template v-slot:activator="{ props }">
-              <v-btn v-bind="props">
-                <v-icon>mdi-menu</v-icon>
-              </v-btn>
-            </template>
-            
-          </v-menu>
-        </v-col>
-      </v-row>
-
-    </v-container>
+        <v-list>
+          <v-list-item title="Posts"/>
+          <v-list-item title="Publications"/>
+          <v-list-item title="Projects"/>
+          <v-list-item title="Contact"/>
+        </v-list>
+      </v-menu>
+    </template>
   </v-app-bar>
 </template>
